@@ -16,12 +16,12 @@ setInterval(() => {
 <template>
   <div class="icons">
     <div class="stack">
-      <FontAwesomeIcon :icon="['fab', is_rust ? 'rust' : 'node-js']" size="3x" :class="{ 'blur-effect': is_blurred }"
-        class="icon" />
+      <FontAwesomeIcon :icon="['fab', is_rust ? 'rust' : 'node-js']" size="3x"
+        :class="{ 'blur-effect': is_blurred, 'rust': is_rust, 'node': !is_rust }" class="icon" />
     </div>
     <div class="stack">
-      <FontAwesomeIcon :icon="['fab', is_vue ? 'vuejs' : 'react']" size="3x" :class="{ 'blur-effect': is_blurred }"
-        class="icon" />
+      <FontAwesomeIcon :icon="['fab', is_vue ? 'vuejs' : 'react']" size="3x"
+        :class="{ 'blur-effect': is_blurred, vue: is_vue, react: !is_vue }" class="icon" />
 
     </div>
   </div>
@@ -33,7 +33,22 @@ setInterval(() => {
   flex-direction: row;
   column-gap: 24px;
   justify-content: center;
-  color: #646cff
+}
+
+.rust {
+  color: #e0793b;
+}
+
+.node {
+  color: #14b50f;
+}
+
+.vue {
+  color: #01c080;
+}
+
+.react {
+  color: #01d9ff;
 }
 
 .icon {

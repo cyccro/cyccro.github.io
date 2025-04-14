@@ -34,4 +34,12 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
   transform: translateY(-50%);
   width: 32px;
 }
+
+.nav a {
+  transition-duration: 300ms;
+}
+
+.nav a:hover {
+  scale: 0.9
+}
 </style>
